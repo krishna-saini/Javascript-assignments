@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- text content vs inner text  -->
+    <div id="divA">Apple<span style="display:none"> Orange</span> Grapes</div>
+
+    <!-- createElement vs createTextNode  -->
+    <div id="divB"></div>
+<script>
+    const divB = document.querySelector('#divB');
+    const text1 = document.createTextNode("I am a node");
+    divB.appendChild(text1);
+    const text2 = document.createElement(<p>Hi there</p>);
+    divB.appendChild(text2)
+
+    // divB.textContent = "I am changed";
+    // console.log(divB.childNodes[0])
+
+
+
+
+
+
+
+
+
+    const divA = document.querySelector('#divA');
+    // divA as a node
+    // console.log(divA.textContent);
+    // divA as a HTML element 
+    // console.log(divA.innerText);
+
+
+
+
+
+
+
+
+
+    
+
+    // const tag1 = document.getElementsByTagName("ul")[0].innerText;
+    // console.log(tag1);
+    const tag2 = document.querySelector("ul");
+    // console.log(tag2.innerHTML);
+    const class1 = document.getElementsByClassName("tech");
+    // console.log(class1);
+    const class2 = document.querySelectorAll(".tech")
+    // console.log(class2);
+    const id1 = document.getElementById('heading');
+    const id2= document.querySelector("#heading");
+    // console.log(id1.innerText,'_----', id2.innerHTML);
+
+    // console.log(id2.textContent);
+    // console.log(id2.innerText);
+</script>
+</body>
+</html>
