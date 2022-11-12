@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <label for="inputText" >Enter the word</label>
+        <input type="text" id="inputText">
+        <button class="btn">Check palindrome?</button>
+        <h4 class="result"></h4>
+    </div>
+    <script>
+        const inputEl = document.querySelector('#inputText');
+        const resultEl = document.querySelector('.result');
+        const btn = document.querySelector('.btn');
+        btn.addEventListener('click', ()=>{
+            palindrome(inputEl.value) ? resultEl.textContent = `it is a palindrome`: resultEl.textContent = `it is not a palindrome`
+        })
+        function palindrome(str){
+            console.log(str);
+            let reverseStr = '';
+            for(let i=0;i<str.length;i++){
+                reverseStr += str[str.length-i-1];
+            }
+            return str === reverseStr ? true : false;
+        }
+    </script>
+</body>
+</html>
