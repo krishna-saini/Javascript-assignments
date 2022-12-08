@@ -12,12 +12,32 @@
 
     <!-- createElement vs createTextNode  -->
     <div id="divB"></div>
+
+   <!-- appendchild vs append  -->
+    <div class="divC">Hello there you</div>
 <script>
+//    appendchild vs append 
+    const divC = document.querySelector('.divC');
+    const newEl = document.createElement('h3');
+    newEl.textContent = "nes confgsdtnetn"
+    divC.append("krihsn")
+    divC.append(newEl)
+    divC.append("krihsn")
+    newEl.textContent = "nes sfdgdfsconfgsdtnetn"
+    divC.append(newEl)
+
+
+    // <!-- createElement vs createTextNode  -->
     const divB = document.querySelector('#divB');
+
     const text1 = document.createTextNode("I am a node");
+    // text1.innerHTML = "hello welcome <button>click </button>";
     divB.appendChild(text1);
-    const text2 = document.createElement(<p>Hi there</p>);
-    divB.appendChild(text2)
+    divB.textContent += "ehySADFDSFu"
+
+    const divEl = document.createElement("div");
+    divEl.innerHTML = "hello welcome <button>click </button>";
+    // divB.insertAdjacentElement(divEl);
 
     // divB.textContent = "I am changed";
     // console.log(divB.childNodes[0])
@@ -29,7 +49,7 @@
 
 
 
-
+    // text content vs inner text  
     const divA = document.querySelector('#divA');
     // divA as a node
     // console.log(divA.textContent);
